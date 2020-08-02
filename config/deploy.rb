@@ -1,17 +1,19 @@
-# config valid for current version and patch releases of Capistrano
+	# config valid for current version and patch releases of Capistrano
 lock "~> 3.14.1"
 
 set :application, "sunshinemeditech"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:vishalinzalkar123/SunshineMediTech.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
+set :deploy_to, "/home/vishal/#{fetch :application}"
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public/system', 'public/uploads'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
+set :keep_releases, 5
 
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
