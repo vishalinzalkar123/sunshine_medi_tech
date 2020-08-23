@@ -2,8 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "sunshine_medi_tech"
-set :repo_url, "https://github.com/vishalinzalkar123/sunshine_medi_tech.git"
-
+set :repo_url, "git@github.com:vishalinzalkar123/sunshine_medi_tech.git"
 
 # Deploy to the user's home directory
 set :deploy_to, "/home/deploy/#{fetch :application}"
