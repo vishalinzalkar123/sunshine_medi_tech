@@ -1,5 +1,9 @@
 {
   "name": "SunshineMediTech",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "boxicons": "^2.0.5",
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4"
+  }
 }
