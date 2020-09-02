@@ -1,0 +1,81 @@
+<b class="screen-overlay"></b>
+<button data-trigger="#navbar_main_one" class="d-lg-none btn btn-warning" type="button">Show navbar</button>
+<nav id="navbar_main_one" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+  <div class="offcanvas-header">  
+    <button class="btn btn-danger btn-close float-right"> &times Close </button>
+    <h5 class="py-2 text-white">Main navbar</h5>
+  </div>
+
+  <ul class="navbar-nav mx-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">About US</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">About Director</a>
+        <a class="dropdown-item" href="#">Vision and Mission</a>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Services We Offer</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Staffing Solutions</a>
+        <a class="dropdown-item" href="#">Career Consultant</a>
+        <a class="dropdown-item" href="#">Placement Services</a>
+        <a class="dropdown-item" href="#">Manpower Recruitment</a>
+        <a class="dropdown-item" href="#">Human Resource Consultancy</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Recruiter zone</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Industry We Serve</a>
+        <a class="dropdown-item" href="#">Post Vacancies</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Candidate zone</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Post Resume</a>
+        <a class="dropdown-item" href="#">Current Jobs</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Our Team</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Core Team</a>
+        <a class="dropdown-item" href="#">Teachers</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" href="#">Testimonials</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Testimonials From Client</a>
+        <a class="dropdown-item" href="#">Testimonials From Candidate</a>
+        <a class="dropdown-item" href="#">Google Reviews</a>
+      </div>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link"  href="#">Contact US</a>
+    </li>
+  </ul>
+</nav>
+
+<script type="text/javascript">
+  $("[data-trigger]").on("click", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    var offcanvas_id =  $(this).attr('data-trigger');
+    $(offcanvas_id).toggleClass("show");
+    $('body').toggleClass("offcanvas-active");
+    $(".screen-overlay").toggleClass("show");
+}); 
+
+$(".btn-close, .screen-overlay").click(function(e){
+    $(".screen-overlay").removeClass("show");
+    $(".mobile-offcanvas").removeClass("show");
+    $("body").removeClass("offcanvas-active");
+}); 
+</script>
